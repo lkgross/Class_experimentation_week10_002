@@ -114,7 +114,7 @@ def main():
     cheer2('Revs')
 
 
-main()
+# main()
 
 print()
 
@@ -153,4 +153,67 @@ def cheer3(team_name, times):
         print(f'Go {team_name}!'.lower())
 
 
-cheer3('Patriots'.upper(), 5)
+# cheer3('Patriots'.upper(), 5)
+
+def main():
+    '''Cheer three times for three teams.'''
+    for i in range(3):
+        print('Go Patriots!')
+    print()
+    for i in range(3):
+        print('Go Mets!')
+    print()
+    for i in range(3):
+        print('Go Revs!')
+
+
+print()
+
+# main()
+
+unprinted = ['egg timer', 'frog']
+
+
+def print_models(unprinted, printed):
+    """3d print a set of models."""
+    while unprinted:
+        current_model = unprinted.pop()
+        print(f"Printing {current_model}")
+        printed.append(current_model)
+    print(f'These items are unprinted: {unprinted}')
+    print(f'These items were printed: {printed}')
+
+
+print_models(['phone case', 'pendant', 'ring'], [])
+
+list1 = ['phone case', 'pendant', 'ring']
+list2 = []
+
+
+# if list1:
+#   print("Yes!")
+
+# if list2:
+#    print("Yes!")
+
+def print_models2(unprinted, printed):
+    """3d print a set of models."""
+    while unprinted:
+        current_model = unprinted.pop()
+        print(f"Printing {current_model}")
+        printed.append(current_model)
+    return printed
+
+
+printed = print_models2(['phone case', 'pendant', 'ring'], [])
+print(printed)
+
+print()
+
+
+def print3d_batches():
+    returned_printed = print_models2(['phone case', 'pendant', 'ring'], [])
+    print(print_models2(['egg timer', 'frog'], returned_printed))
+
+
+print3d_batches()
